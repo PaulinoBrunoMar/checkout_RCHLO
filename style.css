@@ -1,60 +1,85 @@
-/*Início Reset geral*/
+/*Configurações gerais*/
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-family: "Open Sans", sans-serif;
 }
-/*Fim Reset geral*/
+
+body {
+  overflow-x: hidden;
+}
+/*Fim configurações gerais*/
 
 /*Início Sessão do header*/
 header {
   width: 100%;
-  height: 150px;
-  padding-top: 30px;
+  height: 250px;
+  padding-top: 2rem;
   background-color: #eceaf0;
-  margin: auto;
 }
 
-header > div {
-  width: 50%;
-  margin: auto;
+header > .container {
+  padding-top: 2rem;
+}
+
+hr {
+  color: #eceaf0;
+}
+
+.title-header {
+  font-size: 3rem;
+}
+
+.subtitle-header {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .title-header {
+    font-size: 50px;
+  }
+
+  .subtitle-header {
+    font-size: 10px;
+  }
 }
 /*Fim Sessão do header*/
 
 /* Início sessão section*/
-section {
-  margin-top: 30px;
+.card_produto {
+  margin-top: 2rem;
 }
 
 .title {
-  font-size: 30px;
-}
-
-section > div {
-  width: 50%;
-  margin: auto;
-  border: solid 2px #eceaf0;
+  font-size: 2rem;
 }
 
 .img-div {
   padding: 5px;
-  margin: 25px;
-  border: solid 2px #eceaf0;
-  border-radius: 5px;
-}
-
-.img-description {
-  margin: -20px 10px 10px 10px;
-}
-
-.form {
-  width: 50%;
-  margin: auto;
+  margin: 20px;
 }
 
 form {
-  margin: 20px;
+  margin-top: 2rem;
 }
-hr {
-  color: #eceaf0;
+/* .personal-data {
+  margin-bottom: 20px;
+  width: 100%;
 }
+
+.credit-card {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .personal-data {
+    width: 50%;
+  }
+
+  .credit-card {
+    width: 50%;
+  }
+} */
+
 /* Fim sessão section*/
