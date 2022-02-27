@@ -45,6 +45,24 @@ function mascaraCVV(i) {
   });
 })();
 
+(function () {
+  function adicionar() {
+    var dados = JSON.stringify({
+      nome: document.querySelector("input[name=nome]").value,
+      email: document.querySelector("input[name=email]").value,
+    });
+    // tbClientes.push(dados);
+    localStorage.setItem("storage", JSON.stringify(dados));
+    alert("Pedido registrado!");
+    return true;
+  }
+  var form = document.querySelector("#form");
+  form.addEventListener("submit", function () {
+    // event.preventDefault(); event
+    return adicionar();
+  });
+})();
+
 function totalValue() {
   var quantity = parseFloat(document.querySelector("#quantity").value);
   var product_value = parseFloat(

@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="style.css" />
+    
     <title>Checkout RCHLO</title>
   </head>
   <body onload = "initPage()">
@@ -81,7 +83,7 @@
 
         <!-- Início coluna formulário -->
         <div class="col-md-12 col-lg-8 col-xl-6">
-            <form class="needs-validation" novalidate>    
+            <form id="form" action="../src/confirmaçãoPedido/confpedido.html" class="needs-validation" novalidate>    
               <!-- Início linha dentro do formulário -->
               <div class="row" >
                 <!-- Início coluna dados pessoais -->
@@ -89,14 +91,14 @@
                   <legend>Dados pessoais</legend>
                     <div class="mb-3">
                       <label for="fullName" class="form-label">Nome completo</label>
-                      <input maxlength="200" required type="text" class="form-control" id="fullName" placeholder="Insira seu nome completo">
+                      <input maxlength="200" required type="text" class="form-control" id="fullName" name="nome" placeholder="Insira seu nome completo">
                       <div class="invalid-feedback">
                         Nome obrigatório, por favor insira seu nome completo!
                       </div>
                     </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">Email</label>
-                      <input maxlength="300" required type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@exemplo.com">
+                      <input maxlength="300" required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="email@exemplo.com">
                       <div class="invalid-feedback">
                         E-mail obrigatório, por favor preencha um email válido!
                       </div>
