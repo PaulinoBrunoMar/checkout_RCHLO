@@ -46,7 +46,7 @@ hr {
 }
 /*Fim Sessão do header*/
 
-/* Início sessão section*/
+/* Início sessão do corpo*/
 .card_produto {
   margin-top: 2rem;
 }
@@ -63,23 +63,16 @@ hr {
 form {
   margin-top: 2rem;
 }
-/* .personal-data {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.credit-card {
-  width: 100%;
-}
 
 @media screen and (max-width: 1200px) {
   .personal-data {
-    width: 50%;
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   .credit-card {
-    width: 50%;
+    width: 100%;
   }
-} */
+}
 
-/* Fim sessão section*/
+/* Fim sessão do corpo*/
