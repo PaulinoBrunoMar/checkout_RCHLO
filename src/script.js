@@ -23,29 +23,6 @@ function mascaraCVV(i) {
 }
 
 (function () {
-  "use strict";
-
-  // Seleciona todos os forms que desejamos aplicar a validação
-  var forms = document.querySelectorAll(".needs-validation");
-
-  // laço que previne a submissão do form até que sejá válido
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
-
-(function () {
   function adicionar() {
     var dados = JSON.stringify({
       nome: document.querySelector("input[name=nome]").value,
@@ -53,7 +30,6 @@ function mascaraCVV(i) {
     });
     // tbClientes.push(dados);
     localStorage.setItem("storage", JSON.stringify(dados));
-    alert("Pedido registrado!");
     return true;
   }
   var form = document.querySelector("#form");
@@ -63,7 +39,10 @@ function mascaraCVV(i) {
   });
 })();
 
+houve_mudança = false;
+
 function totalValue() {
+  houve_mudança = true;
   var quantity = parseFloat(document.querySelector("#quantity").value);
   var product_value = parseFloat(
     document
@@ -86,4 +65,58 @@ function initPage() {
   var total = document.querySelector("#total");
 
   total.value = "R$ " + product_value;
+}
+
+function verificaqntd () {
+  var quantity = parseFloat(document.querySelector("#quantity").value);
+  
+  if(houve_mudança) {
+    if (!confirm("Quantidade " + quantity + " de produtos está correta?")) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false
+    }
+    else{
+      
+  // Seleciona todos os forms que desejamos aplicar a validação
+  var forms = document.querySelectorAll(".needs-validation");
+
+  // laço que previne a submissão do form até que sejá válido
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+    }
+  }
+  else {
+    
+  // Seleciona todos os forms que desejamos aplicar a validação
+  var forms = document.querySelectorAll(".needs-validation");
+
+  // laço que previne a submissão do form até que sejá válido
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+  }
 }
