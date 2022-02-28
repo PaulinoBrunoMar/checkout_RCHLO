@@ -17,6 +17,8 @@ header {
   height: 250px;
   padding-top: 2rem;
   background-color: #eceaf0;
+  border-bottom: 2px white;
+  box-shadow: 1px 1px 5px;
 }
 
 header > .container {

@@ -10,8 +10,20 @@ header {
   height: 150px;
   padding-top: 3rem;
   background-color: #eceaf0;
+  border-bottom: 2px white;
+  box-shadow: 1px 1px 5px;
 }
 
 .body {
-  padding-top: 3rem;
+  padding-top: 1rem;
+}
+
+nav {
+  background-color: #eceaf0;
+  border: 2px white;
+  box-shadow: 1px 1px 5px;
+}
+
+h2 {
+  font-weight: bold;
 }

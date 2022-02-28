@@ -10,11 +10,10 @@ function initPage() {
   var parse = JSON.parse(registro);
   var obj = JSON.parse(parse);
 
-  cliente.innerHTML = "Olá " + obj.nome + ", obrigado por comprar na RCHLO";
+  cliente.innerHTML = "Olá " + obj.nome + ", obrigado por comprar conosco";
 
   pedido.innerHTML = "Seu pedido: " + random;
 
   email.innerHTML =
-    "Em breve receberá um email com a confirmação de seu pedido em: " +
-    obj.email;
+    "Em breve receberá um email com a confirmação em: " + obj.email;
 }

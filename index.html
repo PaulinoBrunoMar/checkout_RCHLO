@@ -62,12 +62,13 @@
               </div>
             </div>
 
+            <!-- Início card quantidade/total -->
             <div class="card text-dark bg-light mb-3">
               <form>
                 <div class="card-body" >
                   <div class="mb-3">
                     <label for="quatity" class="form-label">Quantidade</label>
-                    <input onchange="totalValue()" value="1" min="1" max="99" type="number" class="form-control" id="quantity">
+                    <input onchange="totalValue()" value="1" min="1" max="99" type="number" name="quatity" class="form-control" id="quantity">
                   </div>
                   <div class="mb-3">
                     <label for="total" class="form-label">Total</label>
@@ -76,6 +77,7 @@
                 </div>
               </form>
             </div>
+            <!-- Fim card quantidade/total -->
           </div>
           <!-- Fim card produto -->
         </div>
@@ -83,7 +85,7 @@
 
         <!-- Início coluna formulário -->
         <div class="col-md-12 col-lg-8 col-xl-6">
-            <form id="form" action="../src/confirmaçãoPedido/confpedido.html" class="needs-validation" novalidate>    
+            <form id="form" action="./src/confirmaçãoPedido/confpedido.html" class="needs-validation" novalidate>    
               <!-- Início linha dentro do formulário -->
               <div class="row" >
                 <!-- Início coluna dados pessoais -->
@@ -163,5 +165,6 @@
     <!-- Fim container geral corpo-->
 
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
